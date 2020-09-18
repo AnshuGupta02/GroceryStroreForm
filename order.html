@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>XYZ GROCERY SHOP</title>
+<link rel='stylesheet' type='text/css' href='order.css'>
+<link rel='icon' type='image' href='https://i7.pngguru.com/preview/871/494/366/grocery-store-computer-icons-food-clip-art-store.jpg'>
+<script src="order.js"></script>
+</head>
+
+<body>
+
+<center>
+<h1 style="width:30%; text-shadow: 2px 2px 4px lightblue; border:3px double; padding:4px;">XYZ GROCERY SHOP</h1>
+</center>
+
+<form action="#" onsubmit="return validation_form();"  >
+
+<h1 class="forma">Make an order:</h1>
+<div>
+    <table class="forma">
+	        <tr>
+		        <td>First Name:</td>
+				<td><input onblur="frst();" id="fn" required /></td>
+				<td class="ttcol"><span id="fnp"></span></td>
+		    </tr>
+			<tr>
+				<td>Last Name:</td>
+				<td ><input onblur="last();" id="ln" /></td>
+				<td class="ttcol"><span id="lnp"></span></td>
+			</tr>
+			<tr>
+				<td>Phone Number:</td>
+				<td><input min="0" onblur="phn();"  id="pn" placeholder="xxx-xxx-xxxx" required /></td>
+				<td class="ttcol" id="pnt">Please enter 10 digit no.</td>
+			</tr>
+			<tr>
+			<td>items:</td>
+				<td id="item"><input type="checkbox" id="cb1" >Flour</input><input id="kitna1" type="number" min="1" max="10" style="margin-left:30px;" >kg</input><br>
+					<input type="checkbox" id="cb2">Rice</input><input id="kitna2" type="number" min="1" max="10" style="margin-left:35px;" >kg</input><br>
+					<input type="checkbox" id="cb3">Sugar</input><input id="kitna3" type="number" min="1" max="10" style="margin-left:26px;" >kg</input><br>
+					<input type="checkbox" id="cb4">Salt</input><input id="kitna4" type="number" min="1" max="10"  style="margin-left:38px;" >kg</input></td>
+				<td class="ttcol">
+				<span>INR 30/kg</span><br>
+				<span>INR 50/kg</span><br>
+				<span>INR 45/kg</span><br>
+				<span>INR 20/kg</span><br>
+				</td>	
+			</tr>
+	        <tr>
+				<td>Total Amount:</td>
+				<td><input id="ta" style="width:85px;" value="₹ 0" readonly /><span id="button2" onclick="updt();"><em>Update</em></span></td>
+				<td class="ttcol" id="taxinfo">INR (Without 20% tax)</td>
+			</tr>
+			<tr>
+			<td colspan="3"  id="button" ><span onclick="calordr();" id="but" class="button"><strong>Order Summary</strong></span></td>
+			</tr>
+			<tr><td><button type="submit" value="submit" onclick="calordr();">order now!</button></td></tr>
+
+	</table>
+	
+</form>
+<span id="ordr_sum"></span>
+</div>
+</body>
+</html>
